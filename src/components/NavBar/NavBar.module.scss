@@ -1,0 +1,32 @@
+@import '../../styles/settings.scss';
+
+.nav {
+    background-color: darken($color-dark, 3%);
+    margin: 0;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.icon {
+    font-size: 24px;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
