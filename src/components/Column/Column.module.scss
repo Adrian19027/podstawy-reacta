@@ -33,6 +33,9 @@
 
 .cards {
     padding: math.div($base-size, 2) 0;
+    display: flex;
+    flex-direction: column;
+    gap: $base-size;
 }
 
 @media (max-width: 767px) {

@@ -11,3 +11,25 @@
     justify-content: space-between;
     font-weight: bold;
 }
+
+.favoriteButton {
+    border: none;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+    // Kolor dla ikonki w przypadku, gdy karta jest ulubiona
+    &.fa-star {
+        color: gold; // Złota gwiazdka
+    }
+
+    // Kolor dla ikonki, gdy karta nie jest ulubiona
+    &.fa-star-o {
+        color: gray; // Szara gwiazdka
+    }
+
+    &:hover {
+        color: #ff9800; // Kolor na hover (np. pomarańczowy)
+    }
+}

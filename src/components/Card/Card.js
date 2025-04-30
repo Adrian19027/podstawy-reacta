@@ -1,8 +1,21 @@
+import { useDispatch} from 'react-redux';
 import styles from './Card.module.scss';
+import { toggleFavorite } from '../../redux/cardsRedux.js';
 
-const Card = props => {
+const Card = ({id, title, isFavorite}) => {
+
+    const dispatch = useDispatch();
+
+
+    const handleToggleFavorite = () => {
+        dispatch(toggleFavorite(id));
+    }
     return (
-        <li className={styles.card}>{props.title}</li>
+        <li className={styles.card}>{title}
+            <button className={`fa ${isFavorite ? 'fa-star' : 'fa-star-o'} ${styles.favoriteButton}`}
+            onClick={handleToggleFavorite}
+            ></button>
+        </li>
     );
 };
 
