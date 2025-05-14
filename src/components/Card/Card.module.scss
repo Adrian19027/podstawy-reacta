@@ -10,6 +10,12 @@
     display: flex;
     justify-content: space-between;
     font-weight: bold;
+    align-items: center;
+
+    .favoriteButton,
+    .deleteButton {
+        margin-left: 5px; 
+    }
 }
 
 .favoriteButton {
@@ -18,18 +24,34 @@
     font-size: 20px;
     cursor: pointer;
     transition: color 0.3s ease;
+    padding: 0;
+    margin-right: 5px;
 
-    // Kolor dla ikonki w przypadku, gdy karta jest ulubiona
+    
     &.fa-star {
-        color: gold; // Złota gwiazdka
+        color: gold; 
     }
 
-    // Kolor dla ikonki, gdy karta nie jest ulubiona
+    
     &.fa-star-o {
-        color: gray; // Szara gwiazdka
+        color: gray; 
     }
 
     &:hover {
-        color: #ff9800; // Kolor na hover (np. pomarańczowy)
+        color: #ff9800; 
+    }
+}
+
+.deleteButton {
+    border: none;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    margin-left: 5px;
+    padding: 0;
+
+    &:hover {
+        color: #ff9800;
     }
 }
